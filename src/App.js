@@ -1,10 +1,10 @@
-import NavBar from "./NavBar";
+import Navbar from "./Navbar";
+import {Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 function App() {
     return (
         <div>
-            <NavBar/>
-            <h1>Home</h1>
+            <Navbar/>
         </div>
     );
 }
