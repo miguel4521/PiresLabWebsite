@@ -11,7 +11,6 @@ function App() {
     const parallaxRef = useRef(null);
     const [childLoaded, setChildLoaded] = useState(false);
 
-
     useEffect(() => {
         if (parallaxRef.current && !childLoaded) {
             setChildLoaded(true)
@@ -30,7 +29,7 @@ function App() {
             const contentElement = parallaxRef.current.content.current;
 
             const observer = new MutationObserver(mutationsList => {
-                for(let mutation of mutationsList) {
+                for (let mutation of mutationsList) {
                     if (mutation.attributeName === 'style') {
                         const children = contentElement.children;
                         let height = 0;
@@ -41,34 +40,25 @@ function App() {
                         else {
                             for (let i = 0; i < children.length; i++) {
                                 if (i < 2 || i > 3)
-                                    height+=children[i].offsetHeight
+                                    height += children[i].offsetHeight
                             }
                         }
-                        contentElement.style.height = `${height+200}px`;
+                        contentElement.style.height = `${height + 200}px`;
                     }
                 }
             });
 
-            observer.observe(contentElement, { attributes: true, childList: false, subtree: false });
+            observer.observe(contentElement, {attributes: true, childList: false, subtree: false});
 
             // Cleanup the observer on component unmount
             return () => observer.disconnect();
         }
     }, [parallaxRef, childLoaded]);
 
-
-    useEffect(() => {
-        // preload all images
-        const images = ["/images/PiresLabResearchPg3.png", "/images/PiresLabResearchPg4.png", "/images/PiresLabResearchPg5.png",];
-
-        images.forEach(image => {
-            new Image().src = image;
-        });
-    }, []);
-
     return (
         <div style={{height: "100vh", overflow: "hidden"}}>
-            <Parallax ref={parallaxRef} pages={3} style={{minHeight: "625px", maxHeight: "1000px", position: "relative"}}>
+            <Parallax ref={parallaxRef} pages={3}
+                      style={{minHeight: "625px", maxHeight: "1000px", position: "relative"}}>
                 <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.6}>
                     <Home/>
                 </ParallaxLayer>

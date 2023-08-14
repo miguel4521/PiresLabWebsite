@@ -8,6 +8,7 @@ import "./index.css";
 import Navbar from "./Navbar";
 import Research from "./Research";
 import App from "./App";
+import {useEffect} from "react";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 ], {
     basename: "/Pires",
 });
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router}/>

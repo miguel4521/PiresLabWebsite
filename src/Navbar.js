@@ -1,6 +1,7 @@
 import "./Navbar.css"
 import { Outlet } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import {useEffect} from "react";
 
 const Navbar = () => {
     return (
