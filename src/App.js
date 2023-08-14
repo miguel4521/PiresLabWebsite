@@ -11,6 +11,22 @@ function App() {
     const parallaxRef = useRef(null);
     const [childLoaded, setChildLoaded] = useState(false);
 
+    const getOptimalHeight = (contentElement) => {
+        const children = contentElement.children;
+        let height = 0;
+        if (window.innerHeight < 400)
+            height = 1400;
+        else if (window.innerHeight < 500)
+            height = 1500;
+        else {
+            for (let i = 0; i < children.length; i++) {
+                if (i < 2 || i > 3)
+                    height += children[i].offsetHeight
+            }
+        }
+        return `${height + 200}px`;
+    }
+
     useEffect(() => {
         if (parallaxRef.current && !childLoaded) {
             setChildLoaded(true)
@@ -19,10 +35,7 @@ function App() {
 
         if (childLoaded) {
             parallaxRef.current.content.current.style.transition = "height 0.5s ease-in-out";
-            if (window.innerHeight < 625)
-                parallaxRef.current.content.current.style.height = "1700px";
-            else
-                parallaxRef.current.content.current.style.height = "2000px";
+            parallaxRef.current.content.current.style.height = getOptimalHeight(parallaxRef.current.content.current)
         }
 
         if (parallaxRef.current && parallaxRef.current.content.current) {
@@ -31,19 +44,9 @@ function App() {
             const observer = new MutationObserver(mutationsList => {
                 for (let mutation of mutationsList) {
                     if (mutation.attributeName === 'style') {
-                        const children = contentElement.children;
-                        let height = 0;
-                        if (window.innerHeight < 400)
-                            height = 1400;
-                        else if (window.innerHeight < 500)
-                            height = 1500;
-                        else {
-                            for (let i = 0; i < children.length; i++) {
-                                if (i < 2 || i > 3)
-                                    height += children[i].offsetHeight
-                            }
-                        }
-                        contentElement.style.height = `${height + 200}px`;
+                        const newHeight = getOptimalHeight(contentElement);
+                        if (newHeight !== contentElement.style.height)
+                            contentElement.style.height = newHeight;
                     }
                 }
             });
