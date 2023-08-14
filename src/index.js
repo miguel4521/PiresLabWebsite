@@ -5,12 +5,23 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import Navbar from "./Navbar";
+import Research from "./Research";
 import App from "./App";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App />
+        element: <Navbar />,
+        children: [
+            {
+                path: "/",
+                element: <App />
+            },
+            {
+                path: "research",
+                element: <Research />
+            }
+        ]
     },
 ], {
     basename: "/Pires",
