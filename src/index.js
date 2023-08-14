@@ -1,18 +1,21 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-    createBrowserRouter,
-    RouterProvider,
+    BrowserRouter,
+    createBrowserRouter, Route,
+    RouterProvider, Routes,
 } from "react-router-dom";
 import "./index.css";
 import Navbar from "./Navbar";
 import Research from "./Research";
 import App from "./App";
-import {useEffect} from "react";
+import People from "./People";
+import {Switch} from "@mui/material";
 
 const router = createBrowserRouter([
     {
         element: <Navbar />,
+        errorElement: <div>Not Found</div>,
         children: [
             {
                 path: "/",
@@ -21,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "research",
                 element: <Research />
+            },
+            {
+                path: "people",
+                element: <People />
             }
         ]
     },
@@ -30,5 +37,14 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router}/>
+    <BrowserRouter basename="/Pires">
+        <>
+            <Navbar />
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="research" element={<Research />} />
+            <Route path="people" element={<People />} />
+        </Routes>
+        </>
+    </BrowserRouter>
 );

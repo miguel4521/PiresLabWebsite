@@ -1,0 +1,49 @@
+.person-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 10px;
+    width: 100%;
+}
+
+.person-img {
+    width: 150px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.person-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+}
+
+.person-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.person-info {
+    padding: 2px;
+}
+
+.person-img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .person-info-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-button.person-contact {
+        display: block;
+    }
+}

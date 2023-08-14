@@ -6,10 +6,23 @@ import Header from "./Header";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import {useEffect, useRef, useState} from "react";
+import {NavLink, useLocation} from "react-router-dom";
 
 function App() {
     const parallaxRef = useRef(null);
     const [childLoaded, setChildLoaded] = useState(false);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({behavior: 'smooth'});
+                console.log(element)
+            }
+        }
+    }, [location, childLoaded]);
 
     const getOptimalHeight = (contentElement) => {
         const children = contentElement.children;
@@ -83,19 +96,19 @@ function App() {
                                      imageSrc="images/PiresLabResearchPg4.png"
                                      id="evolution-of-sex-determination"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={1.4} speed={0} factor={0.7}>
+                <ParallaxLayer className="parallax" id="contact" offset={1.4} speed={0} factor={0.7}>
                     <div className="page-container info">
-                        <Header header="People"/>
-                        <button className="button">
+                        <div className="header-txt contact-header">People</div>
+                        <NavLink to={"people"} className={"button"}>
                             VIEW PEOPLE
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
-                        </button>
-                        <Header header="Publications"/>
+                        </NavLink>
+                        <div className="header-txt contact-header">Publications</div>
                         <button className="button">
                             VIEW PUBLICATIONS
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
                         </button>
-                        <Header header="Contact"/>
+                        <div className="header-txt contact-header">Contact</div>
                         <div className="contact-info">
                             <a href="https://warwick.ac.uk/fac/sci/lifesci/people/apiresdasilva/" target="_blank"
                                rel="noreferrer" className="contact-button">
@@ -129,7 +142,7 @@ function App() {
                                 <LinkedInIcon sx={{fontSize: "3em"}}/>
                             </a>
                             <a href="https://twitter.com/andre_evol" className="contact-button" target="_blank"
-                               rel="noreferrer"><img className="icon" src="images/XIcon.png"/></a>
+                               rel="noreferrer"><img className="icon" src="/images/TwitterX.svg" alt=""/></a>
                         </div>
                     </div>
                 </ParallaxLayer>

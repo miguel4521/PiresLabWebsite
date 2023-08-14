@@ -1,16 +1,3 @@
-.content-container.research {
-    margin-top: 100px;
-    display: flex;
-    transition: 0.5s;
-    justify-content: normal;
-    align-items: normal;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    background-color: #f8f4f4;
-    border-bottom: 3px solid #868686;
-}
-
 .content-container.research-preview {
     display: flex;
     transition: 0.5s;
@@ -57,14 +44,10 @@
     border-radius: 20px;
 }
 
-.header-txt {
-    font-size: 40px;
-}
-
 .research-txt-wrapper {
     border: 3px solid #868686;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
 }
 
@@ -74,17 +57,7 @@
 }
 
 @media (max-width: 1000px) {
-    .header-txt {
-        font-size: 30px;
-    }
-
     .research-img {
         width: 500px;
-    }
-}
-
-@media (max-height: 720px) {
-    .header-txt {
-        font-size: 30px;
     }
 }

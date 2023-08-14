@@ -1,47 +1,26 @@
 import "./Research.css";
 import Header from "./Header";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 
 const Research = () => {
     const location = useLocation();
-    const [imagesLoaded, setImagesLoaded] = useState(false);
-
-    useEffect(() => {
-        const images = [
-            '/images/PiresLabResearchPg5.png',
-            '/images/PiresLabResearchPg4.png',
-            '/images/PiresLabResearchPg3.png'
-        ];
-        let loadedImagesCount = 0;
-
-        images.forEach(src => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => {
-                loadedImagesCount++;
-                if (loadedImagesCount === images.length)
-                    setImagesLoaded(true);
-            };
-        });
-    }, []);
-
 
     useEffect(() => {
         if (location.hash) {
             const element = document.querySelector(location.hash);
-            if (element) {
+            if (element)
                 element.scrollIntoView({behavior: 'smooth', block: 'center'});
-
-            }
         }
-    }, [location, imagesLoaded]);
+    }, [location]);
 
-    return imagesLoaded && (
+
+    return (
         <div className="page-container">
-            <div className="research content-container">
+            <div className="content-container info">
                 <Header header={"Research"}/>
-                <div className="content-txt" style={{marginBottom: '10px'}}>
+
+                <div style={{padding: "10px"}}>
                     Recent advances such as technologies to easily edit genomes and affordable whole genome
                     sequencing, are providing a paradigm shift in genetics research. New organisms can now be adopted
                     with
@@ -50,9 +29,10 @@ const Research = () => {
                     described by us recently.
                 </div>
 
+
                 <div className="research-txt-wrapper" id="evolution-of-sex-determination">
                     <div className="header-txt">Evolution of sex determination</div>
-                    <div className="content-txt">How did a male/female species evolve into a male/hermaphrodite species
+                    <div>How did a male/female species evolve into a male/hermaphrodite species
                         like <i>C. elegans</i>? We are studying a recently described species of nematode, <i>Auanema
                             rhodensis</i>, which produces males, females and hermaphrodites. This nematode may give some
                         clues as to how new mating systems evolved. Species that produce three genders might be an
@@ -65,7 +45,7 @@ const Research = () => {
                 </div>
                 <div className="research-txt-wrapper" id="intergenerational-inheritance">
                     <div className="header-txt">Intergenerational inheritance</div>
-                    <div className="content-txt">
+                    <div>
                         Information sensed by the maternal generation may be transmitted to the offspring to increase
                         their
                         fitness. However, the mechanisms of inheritance of adaptive maternal effects through the
@@ -87,7 +67,7 @@ const Research = () => {
                 </div>
                 <div className="research-txt-wrapper" id="polar-body-formation-in-males">
                     <div className="header-txt">"Polar-body" formation in males</div>
-                    <div className="content-txt">
+                    <div>
                         We discovered that <i>A. rhodensis males</i>, although being of the XO karyotype, produce only
                         one
                         type of viable sperm: sperm with an X chromosome. The sperm without the X chromosome (the
