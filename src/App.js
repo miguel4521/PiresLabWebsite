@@ -72,28 +72,28 @@ function App({parallaxRef}) {
         <div style={{height: "100vh", overflow: "hidden"}}>
             <Parallax ref={parallaxRef} pages={3}
                       style={{minHeight: "660px", position: "relative"}}>
-                <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.5}>
                     <Home/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.7} speed={3} factor={0.1}>
+                <ParallaxLayer className="parallax" offset={0.6} speed={3} factor={0.1}>
                     <Header header="Research"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.8} speed={0} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0.7} speed={0} factor={0.6}>
                     <ResearchPreview researchTitle='"Polar-body" formation in males'
                                      imageSrc="images/PiresLabResearchPg3.png"
                                      id="polar-body-formation-in-males"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.8} speed={1} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0.7} speed={1} factor={0.6}>
                     <ResearchPreview researchTitle="Intergenerational inheritance"
                                      imageSrc="images/PiresLabResearchPg5.png"
                                      id="intergenerational-inheritance"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.8} speed={3} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0.7} speed={3} factor={0.6}>
                     <ResearchPreview researchTitle="Evolution of sex determination"
                                      imageSrc="images/PiresLabResearchPg4.png"
                                      id="evolution-of-sex-determination"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" id="contact" offset={1.4} speed={0} factor={0.7}>
+                <ParallaxLayer className="parallax" id="contact" offset={1.3} speed={0} factor={0.7}>
                     <div className="page-container info">
                         <div className="header-txt contact-header">People</div>
                         <NavLink to="people" className={"button"}>
