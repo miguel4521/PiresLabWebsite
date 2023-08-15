@@ -50,7 +50,7 @@ const Navbar = ({parallaxRef}) => {
                         </a>
                         <a href="https://twitter.com/andre_evol" className="contact-button" target="_blank"
                            rel="noreferrer"><img loading={"eager"} style={{height: "1.5em"}}
-                                                 src="/images/TwitterX.svg"/></a>
+                                                 src="images/TwitterX.svg"/></a>
                     </div>
                 </div>
             </div>

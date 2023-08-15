@@ -139,7 +139,7 @@ function App({parallaxRef}) {
                                 <LinkedInIcon sx={{fontSize: "3em"}}/>
                             </a>
                             <a href="https://twitter.com/andre_evol" className="contact-button" target="_blank"
-                               rel="noreferrer"><img className="icon" src="/images/TwitterX.svg" alt=""/></a>
+                               rel="noreferrer"><img className="icon" src="images/TwitterX.svg" alt=""/></a>
                         </div>
                     </div>
                 </ParallaxLayer>

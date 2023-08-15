@@ -39,7 +39,7 @@ const Research = () => {
                         evolutionary intermediate between males/females and males/hermaphrodites.
                     </div>
                     <div/>
-                    <img src="/images/PiresLabResearchPg5.png" alt="" className="img"/>
+                    <img src="images/PiresLabResearchPg5.png" alt="" className="img"/>
                     <div className="content-txt" style={{textAlign: 'center'}}><i>A. rhodensis</i> hermaphrodites
                         self-fertilize to make males, females and hermaphrodites
                     </div>
@@ -64,7 +64,7 @@ const Research = () => {
                         present in
                         other organisms that display intergenerational inheritance.
                         <div/>
-                        <img src="/images/PiresLabResearchPg4.png" alt="" className="img"/>
+                        <img src="images/PiresLabResearchPg4.png" alt="" className="img"/>
                     </div>
                 </div>
                 <div className="research-txt-wrapper" id="polar-body-formation-in-males">
@@ -83,14 +83,14 @@ const Research = () => {
                         this
                         asymmetric cell division occurs.
                         <div/>
-                        <img src="/images/PiresLabResearchPg3.png" alt="" className="img"/>
+                        <img src="images/PiresLabResearchPg3.png" alt="" className="img"/>
                     </div>
                 </div>
                 <div className="research-txt-wrapper">
                     <div className="header-txt">Research Funding</div>
                     <div>
-                        <img src="/images/BBSRC_logo.png" className="funding-img" />
-                        <img src="/images/Leverhulme_Trust_CMYK_blue.jpg" className="funding-img" />
+                        <img src="images/BBSRC_logo.png" className="funding-img" />
+                        <img src="images/Leverhulme_Trust_CMYK_blue.jpg" className="funding-img" />
                     </div>
                 </div>
                 <div className="footer" />

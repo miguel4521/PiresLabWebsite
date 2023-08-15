@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-    BrowserRouter,
+    BrowserRouter, HashRouter,
     Route,
     Routes,
 } from "react-router-dom";
@@ -16,17 +16,17 @@ const RootComponent = () => {
     const parallaxRef = React.useRef(null);
 
     return (
-        <BrowserRouter basename="/Pires">
+        <HashRouter>
             <>
                 <Navbar parallaxRef={parallaxRef}/>
                 <Routes>
                     <Route path="/" element={<App parallaxRef={parallaxRef}/>}/>
-                    <Route path="research" element={<Research/>}/>
-                    <Route path="people" element={<People/>}/>
+                    <Route path="/research" element={<Research/>}/>
+                    <Route path="/people" element={<People/>}/>
                     <Route path="/publications" element={<Publications/>}/>
                 </Routes>
             </>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
