@@ -79,6 +79,10 @@
     transition: 0.3s ease;
 }
 
+.button.view {
+    margin: 10px;
+}
+
 .arrow-wrapper {
     display: flex;
     align-items: center;

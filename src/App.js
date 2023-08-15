@@ -72,7 +72,7 @@ function App({parallaxRef}) {
         <div style={{height: "100vh", overflow: "hidden"}}>
             <Parallax ref={parallaxRef} pages={3}
                       style={{minHeight: "660px", position: "relative"}}>
-                <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.5}>
+                <ParallaxLayer className="parallax" offset={0.15} speed={6.5} factor={0.5}>
                     <Home/>
                 </ParallaxLayer>
                 <ParallaxLayer className="parallax" offset={0.6} speed={3} factor={0.1}>
@@ -93,15 +93,13 @@ function App({parallaxRef}) {
                                      imageSrc="images/PiresLabResearchPg4.png"
                                      id="evolution-of-sex-determination"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" id="contact" offset={1.3} speed={0} factor={0.7}>
+                <ParallaxLayer className="parallax" id="contact" offset={1.25} speed={0} factor={0.7}>
                     <div className="page-container info">
-                        <div className="header-txt contact-header">People</div>
-                        <NavLink to="people" className={"button"}>
+                        <NavLink to="people" className={"button view"}>
                             VIEW PEOPLE
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
                         </NavLink>
-                        <div className="header-txt contact-header">Publications</div>
-                        <NavLink to="publications" className="button">
+                        <NavLink to="publications" className="button view">
                             VIEW PUBLICATIONS
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
                         </NavLink>

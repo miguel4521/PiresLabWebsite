@@ -31,7 +31,12 @@ const People = () => {
         role: "Ph.D. student",
         email: "See-Wing.Lai@warwick.ac.uk",
         imageSrc: "images/people/Belle.png",
-    }];
+    }, {
+        name: "Bernice Chan",
+        role: "Ph.D. student",
+        email: "bernice.chan@warwick.ac.uk",
+        imageSrc: "images/people/bernice_chan.png",
+}];
 
     return (<div className="page-container">
         <div className="content-container info">
