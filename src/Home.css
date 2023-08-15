@@ -13,3 +13,9 @@
 .lab-info {
     font-size: 1.2rem;
 }
+
+@media (max-width: 720px) {
+    .lab-info {
+        font-size: 1rem;
+    }
+}
