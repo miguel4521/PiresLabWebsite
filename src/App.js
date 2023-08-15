@@ -5,11 +5,10 @@ import ResearchPreview from "./ResearchPreview";
 import Header from "./Header";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {NavLink, useLocation} from "react-router-dom";
 
-function App() {
-    const parallaxRef = useRef(null);
+function App({parallaxRef}) {
     const [childLoaded, setChildLoaded] = useState(false);
 
     const location = useLocation();

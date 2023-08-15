@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     margin: 10px;
+    width: 100%;
 }
 
 .person-img {
