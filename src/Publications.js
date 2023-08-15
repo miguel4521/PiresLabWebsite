@@ -57,7 +57,7 @@ const Publications = () => {
         },
         {
             authors: "Al-Yazeedi, T., Xu, E., Kaur, J., Shakes, D., and Pires-daSilva, A. (2022).",
-            title: <div className="publication-title">Lagging X chromatids specify the orientation of asymmetric organelle partitioning in XX spermatocytes of Auanema rhodensis.</div>,
+            title: <div className="publication-title">Lagging X chromatids specify the orientation of asymmetric organelle partitioning in XX spermatocytes of <em>Auanema rhodensis</em>.</div>,
             link: "https://doi.org/10.1093/genetics/iyac159",
             journal: "Genetics, iyac159."
         },
