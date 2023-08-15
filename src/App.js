@@ -71,7 +71,7 @@ function App({parallaxRef}) {
     return (
         <div style={{height: "100vh", overflow: "hidden"}}>
             <Parallax ref={parallaxRef} pages={3}
-                      style={{minHeight: "660px", maxHeight: "1000px", position: "relative"}}>
+                      style={{minHeight: "660px", position: "relative"}}>
                 <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.6}>
                     <Home/>
                 </ParallaxLayer>
