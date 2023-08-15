@@ -10,7 +10,7 @@ const Publications = () => {
         if (location.hash) {
             const element = document.querySelector(location.hash);
             if (element)
-                element.scrollIntoView({behavior: 'smooth'});
+                window.scrollTo({top: element.getBoundingClientRect().top - 150, behavior: 'smooth'})
         }
     }, [location]);
 
@@ -108,6 +108,7 @@ const Publications = () => {
                         })}
                     </div>
                 </div>
+                <div className="footer" />
             </div>
         </div>
     )

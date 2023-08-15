@@ -31,7 +31,6 @@
     justify-content: normal;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
     background-color: #f8f4f4;
     flex-wrap: wrap;
 }
@@ -120,7 +119,7 @@
 }
 
 .footer {
-    height: 50px;
+    height: 100px;
 }
 
 @media (max-width: 1000px) {

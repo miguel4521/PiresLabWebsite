@@ -96,15 +96,15 @@ function App({parallaxRef}) {
                 <ParallaxLayer className="parallax" id="contact" offset={1.4} speed={0} factor={0.7}>
                     <div className="page-container info">
                         <div className="header-txt contact-header">People</div>
-                        <NavLink to={"people"} className={"button"}>
+                        <NavLink to="people" className={"button"}>
                             VIEW PEOPLE
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
                         </NavLink>
                         <div className="header-txt contact-header">Publications</div>
-                        <button className="button">
+                        <NavLink to="publications" className="button">
                             VIEW PUBLICATIONS
                             <div className="arrow-wrapper"><ArrowForwardIcon/></div>
-                        </button>
+                        </NavLink>
                         <div className="header-txt contact-header">Contact</div>
                         <div className="contact-info">
                             <a href="https://warwick.ac.uk/fac/sci/lifesci/people/apiresdasilva/" target="_blank"

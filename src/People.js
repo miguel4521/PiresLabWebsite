@@ -67,6 +67,7 @@ const People = () => {
                     </div>
                 )
             })}
+            <div className="footer" />
         </div>
     </div>)
 }
