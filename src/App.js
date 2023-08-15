@@ -24,10 +24,12 @@ function App({parallaxRef}) {
     const getOptimalHeight = (contentElement) => {
         const children = contentElement.children;
         let height = 0;
-        if (window.innerHeight < 400)
-            height = 1400;
-        else if (window.innerHeight < 500)
+        if (window.innerHeight < 330)
+            height = 1600;
+        else if (window.innerHeight < 400)
             height = 1500;
+        else if (window.innerHeight < 500)
+            height = 1600;
         else {
             for (let i = 0; i < children.length; i++) {
                 if (i < 2 || i > 3)
@@ -71,19 +73,19 @@ function App({parallaxRef}) {
     return (
         <div style={{height: "100vh", overflow: "hidden"}}>
             <Parallax ref={parallaxRef} pages={3}
-                      style={{minHeight: "660px", position: "relative"}}>
+                      style={{minHeight: "700px", position: "relative"}}>
                 <ParallaxLayer className="parallax" offset={0.15} speed={6.5} factor={0.5}>
                     <Home/>
                 </ParallaxLayer>
                 <ParallaxLayer className="parallax" offset={0.6} speed={3} factor={0.1}>
                     <Header header="Research"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.7} speed={0} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0.73} speed={0} factor={0.6}>
                     <ResearchPreview researchTitle='"Polar-body" formation in males'
                                      imageSrc="images/PiresLabResearchPg3.png"
                                      id="polar-body-formation-in-males"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" offset={0.7} speed={1} factor={0.6}>
+                <ParallaxLayer className="parallax" offset={0.71} speed={1} factor={0.6}>
                     <ResearchPreview researchTitle="Intergenerational inheritance"
                                      imageSrc="images/PiresLabResearchPg5.png"
                                      id="intergenerational-inheritance"/>
@@ -93,7 +95,7 @@ function App({parallaxRef}) {
                                      imageSrc="images/PiresLabResearchPg4.png"
                                      id="evolution-of-sex-determination"/>
                 </ParallaxLayer>
-                <ParallaxLayer className="parallax" id="contact" offset={1.25} speed={0} factor={0.7}>
+                <ParallaxLayer className="parallax" id="contact" offset={1.3} speed={0} factor={0.7}>
                     <div className="page-container info">
                         <NavLink to="people" className={"button view"}>
                             VIEW PEOPLE
