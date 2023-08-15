@@ -17,10 +17,8 @@ function App() {
     useEffect(() => {
         if (location.hash) {
             const element = document.querySelector(location.hash);
-            if (element) {
+            if (element)
                 element.scrollIntoView({behavior: 'smooth'});
-                console.log(element)
-            }
         }
     }, [location, childLoaded]);
 
@@ -74,7 +72,7 @@ function App() {
     return (
         <div style={{height: "100vh", overflow: "hidden"}}>
             <Parallax ref={parallaxRef} pages={3}
-                      style={{minHeight: "625px", maxHeight: "1000px", position: "relative"}}>
+                      style={{minHeight: "660px", maxHeight: "1000px", position: "relative"}}>
                 <ParallaxLayer className="parallax" offset={0} speed={6.5} factor={0.6}>
                     <Home/>
                 </ParallaxLayer>

@@ -11,24 +11,25 @@ import Research from "./Research";
 import App from "./App";
 import People from "./People";
 import {Switch} from "@mui/material";
+import Publications from "./Publications";
 
 const router = createBrowserRouter([
     {
-        element: <Navbar />,
+        element: <Navbar/>,
         errorElement: <div>Not Found</div>,
         children: [
             {
                 path: "/",
-                element: <App />
+                element: <App/>
             },
             {
                 path: "research",
-                element: <Research />
+                element: <Research/>
             },
             {
                 path: "people",
-                element: <People />
-            }
+                element: <People/>
+            },
         ]
     },
 ], {
@@ -39,12 +40,13 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter basename="/Pires">
         <>
-            <Navbar />
-        <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="research" element={<Research />} />
-            <Route path="people" element={<People />} />
-        </Routes>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<App/>}/>
+                <Route path="research" element={<Research/>}/>
+                <Route path="people" element={<People/>}/>
+                <Route path="/publications" element={<Publications/>}/>
+            </Routes>
         </>
     </BrowserRouter>
 );
