@@ -78,6 +78,9 @@ const Publications = () => {
             title: <div className="publication-title">Towards genetic modification of plant-parasitic nematodes: delivery of macromolecules to adults and expression of exogenous mRNA in second stage juveniles.</div>,
             link: "https://academic.oup.com/g3journal/article/11/2/jkaa058/6135037",
             journal: "G3 11, jkaa058."
+        },
+        {
+            
         }
     ]
 
