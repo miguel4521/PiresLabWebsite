@@ -12,6 +12,7 @@ const Navbar = ({parallaxRef}) => {
 
     const homePressed = () => {
         setIsMenuOpen(false);
+        console.log(location.pathname)
         if (location.pathname === "/") {
             if (parallaxRef && parallaxRef.current)
                 parallaxRef.current.scrollTo(0); // scroll to the top
