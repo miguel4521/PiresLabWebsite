@@ -89,8 +89,8 @@ const Research = () => {
                 <div className="research-txt-wrapper">
                     <div className="header-txt">Research Funding</div>
                     <div>
-                        <img src="images/BBSRC_logo.png" className="funding-img" />
-                        <img src="images/Leverhulme_Trust_CMYK_blue.jpg" className="funding-img" />
+                        <img src="images/BBSRC_logo.png" alt="" className="funding-img" />
+                        <img src="images/Leverhulme_Trust_CMYK_blue.jpg" alt="" className="funding-img" />
                     </div>
                 </div>
                 <div className="footer" />

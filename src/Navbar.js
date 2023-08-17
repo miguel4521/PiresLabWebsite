@@ -42,14 +42,26 @@ const Navbar = ({parallaxRef}) => {
 
                 <div className="section-right">
                     <div className="anchor-container">
+
+                        <a href="https://scholar.google.com/citations?hl=en&user=R4zSE5cAAAAJ&view_op=list_works&sortby=pubdate"
+                           className="contact-button" target="_blank"
+                           rel="noreferrer"><img loading={"eager"}
+                                                 style={{height: "1.5em"}}
+                                                 src="images/google_scholar.png"/>
+                        </a>
+
                         <a href="https://www.linkedin.com/in/andre-pires-da-silva-147a6416"
                            className="contact-button" target="_blank"
                            rel="noreferrer">
                             <LinkedInIcon sx={{fontSize: "1.5em"}}/>
                         </a>
-                        <a href="https://twitter.com/andre_evol" className="contact-button" target="_blank"
-                           rel="noreferrer"><img loading={"eager"} style={{height: "1.5em"}}
-                                                 src="images/TwitterX.svg"/></a>
+
+                        <a href="https://twitter.com/andre_evol"
+                           className="contact-button" target="_blank"
+                           rel="noreferrer"><img loading={"eager"}
+                                                 style={{height: "1.5em"}}
+                                                 src="images/TwitterX.svg"/>
+                        </a>
                     </div>
                 </div>
             </div>
