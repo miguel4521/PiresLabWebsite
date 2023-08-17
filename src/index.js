@@ -15,7 +15,7 @@ import Publications from "./Publications";
 const RootComponent = () => {
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <>
                 <Navbar/>
                 <Routes>
@@ -25,7 +25,7 @@ const RootComponent = () => {
                     <Route path="/publications" element={<Publications/>}/>
                 </Routes>
             </>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
