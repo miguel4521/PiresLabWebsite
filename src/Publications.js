@@ -239,7 +239,7 @@ const Publications = () => {
             pacificus</em> requires complex interactions between gonadal, mesodermal and epidermal tissues and does
             not rely on single cell inductions.</div>,
         link: "http://dev.biologists.org/content/128/18/3395.long",
-        journal: "Development</strong> 128: 3395-3404."
+        journal: "Development 128: 3395-3404."
     }, {
         authors: "Srinivasan, J., Pires-daSilva, A. Gutierrez, A., Zheng, M., Jungblut, B., Witte, H., Schlak, I. and Sommer, R. J. (2001).",
         title: <div className="publication-title">Microevolutionary analysis of the nematode
@@ -258,7 +258,7 @@ const Publications = () => {
         title: <div className="publication-title"><em>Pristionchus pacificus</em>: a satellite organism in
             evolutionary developmental biology.</div>,
         link: "https://brill.com/view/journals/nemy/2/1/article-p81_10.xml?language=en",
-        journal: "Nematology </strong>2: 81-88."
+        journal: "Nematology 2: 81-88."
     }, {
         authors: "Pires-daSilva, A. and Gruss, P. (1998).",
         title: <div className="publication-title">Gene trap insertion into a novel gene expressed during mouse limb
