@@ -125,6 +125,40 @@
     height: 100px;
 }
 
+.home-title {
+    font-size: 4rem;
+}
+
+.home-subtitle {
+    font-size: 2rem;
+}
+
+.home-txt {
+    font-size: 1.5rem;
+}
+
+.lab-info {
+    font-size: 1.2rem;
+}
+
+.buttons-collection-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .lab-info {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .button {
+        padding: 12px;
+    }
+}
+
 @media (max-width: 1000px) {
     .header-txt {
         font-size: 30px;
@@ -138,19 +172,6 @@
     .section-header {
         font-size: 40px;
     }
-
-    .button {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-}
-
-@media (max-height: 850px) {
-
-
-    .button {
-        padding: 10px;
-    }
 }
 
 @media (max-height: 760px) {
@@ -158,7 +179,4 @@
         font-size: 20px;
     }
 
-    .button {
-        padding: 10px;
-    }
 }

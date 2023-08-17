@@ -5,15 +5,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {useState} from "react";
 import CloseIcon from '@mui/icons-material/Close';
 
-const Navbar = ({parallaxRef}) => {
+const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const location = useLocation();
     const homePressed = () => {
         setIsMenuOpen(false);
         if (location.pathname === "/") {
-            if (parallaxRef && parallaxRef.current)
-                parallaxRef.current.scrollTo(0); // scroll to the top
+            window.scrollTo({top: 0, behavior: 'smooth'})
         }
     };
 
@@ -27,12 +26,12 @@ const Navbar = ({parallaxRef}) => {
             <div className="sections desktop">
                 <NavLink to="/" className="section-left">
                     <div className="lab-name">PIRES LAB</div>
-                    <div className="">Comparative Lab Genetics</div>
+                    <div>Comparative Lab Genetics</div>
                 </NavLink>
 
                 <div className="section-center">
                     <div className="anchor-container">
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" onClick={homePressed}>Home</NavLink>
                         <NavLink to="/research">Research</NavLink>
                         <NavLink to="/people">People</NavLink>
                         <NavLink to="/publications">Publications</NavLink>
@@ -42,12 +41,12 @@ const Navbar = ({parallaxRef}) => {
 
                 <div className="section-right">
                     <div className="anchor-container">
-
                         <a href="https://scholar.google.com/citations?hl=en&user=R4zSE5cAAAAJ&view_op=list_works&sortby=pubdate"
                            className="contact-button" target="_blank"
                            rel="noreferrer"><img loading={"eager"}
                                                  style={{height: "1.5em"}}
-                                                 src="images/google_scholar.png"/>
+                                                 src="images/google_scholar.png"
+                                                 alt=""/>
                         </a>
 
                         <a href="https://www.linkedin.com/in/andre-pires-da-silva-147a6416"
@@ -60,7 +59,9 @@ const Navbar = ({parallaxRef}) => {
                            className="contact-button" target="_blank"
                            rel="noreferrer"><img loading={"eager"}
                                                  style={{height: "1.5em"}}
-                                                 src="images/TwitterX.svg"/>
+                                                 src="images/TwitterX.svg"
+                                                 alt=""
+                        />
                         </a>
                     </div>
                 </div>
@@ -76,7 +77,8 @@ const Navbar = ({parallaxRef}) => {
                 </button>
             </div>
         </nav>
-        <div className="mobile-menu" style={isMenuOpen ? {visibility: "visible", opacity: "1"} : {visibility: "hidden", opacity: "0"}}>
+        <div className="mobile-menu"
+             style={isMenuOpen ? {visibility: "visible", opacity: "1"} : {visibility: "hidden", opacity: "0"}}>
             <div className="menu-nav-option">
                 <NavLink onClick={homePressed} className="menu-nav-link" to="/">Home</NavLink>
             </div>

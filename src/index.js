@@ -13,20 +13,19 @@ import People from "./People";
 import Publications from "./Publications";
 
 const RootComponent = () => {
-    const parallaxRef = React.useRef(null);
 
     return (
-        <HashRouter>
+        <BrowserRouter>
             <>
-                <Navbar parallaxRef={parallaxRef}/>
+                <Navbar/>
                 <Routes>
-                    <Route path="/" element={<App parallaxRef={parallaxRef}/>}/>
+                    <Route path="/" element={<App/>}/>
                     <Route path="/research" element={<Research/>}/>
                     <Route path="/people" element={<People/>}/>
                     <Route path="/publications" element={<Publications/>}/>
                 </Routes>
             </>
-        </HashRouter>
+        </BrowserRouter>
     );
 };
 
