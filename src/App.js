@@ -28,7 +28,7 @@ function App() {
                     nematodes with that produce males, females and hermaphrodites simultaneously.
                 </div>
             </div>
-            <div className="buttons-collection-wrapper">
+            <div className="buttons-collection-wrapper" style={{marginBottom: "50px"}}>
                 <NavLink to="research" className={"button view"}>
                     VIEW RESEARCH
                     <div className="arrow-wrapper"><ArrowForwardIcon/></div>
