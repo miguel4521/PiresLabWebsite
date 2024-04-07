@@ -21,9 +21,10 @@ const Publications = () => {
             International Congress of Nematology, Antibes Juan-les-Pines,
             France. 2 May, 2022</div>
     }, {
-        iframe: <iframe title="vimeo-player" src="https://player.vimeo.com/video/734752257?h=f95d1561c2"
-                        width="100%"
-                        height="100%" frameBorder="0" allowFullScreen></iframe>,
+        iframe: <></>,
+        // <iframe title="vimeo-player" src="https://player.vimeo.com/video/734752257?h=f95d1561c2"
+        //                 width="100%"
+        //                 height="100%" frameBorder="0" allowFullScreen></iframe>,
         videoLink: "https://player.vimeo.com/video/734752257?h=f95d1561c2",
         title: <div className="title">Plasticity and evolution of reproductive system development.Institute of
             Biodiversity, Animal Health & Comparative Medicine,
@@ -38,13 +39,29 @@ const Publications = () => {
             Institute of Biology, Universidade de Brasília, Brazil. 5 May, 2021.</div>
     }]
 
-    const publications = [{
-        authors: "Al-Yazeedi T., Adams S., Tandonnet S., Turner A., Kim, J., Lee, J., Pires-daSilva, A. (2023).",
+    const publications = [
+        {
+        authors: "Pires da Silva, A., Kelleher, R., and Reynoldson, L. (2024).", 
+        title: <div className="publication-title">Decoding lifespan secrets: the role of the gonad in <em>Caenorhabditis elegans</em> aging.</div>,
+        link: "https://www.frontiersin.org/articles/10.3389/fragi.2024.1380016",
+        journal: "Frontiers in Aging, 5, doi: 10.3389/fragi.2024.1380016",
+    }, {
+        authors: "Al-Yazeedi T., Adams S., Tandonnet S., Turner A., Kim, J., Lee, J., Pires-daSilva, A. (2024).",
         title: <div className="publication-title">A QTL influences sex ratios by controlling asymmetric organelle
             positioning during male spermatogenesis in <em>Auanema freiburgense</em>.</div>,
-        link: "https://www.biorxiv.org/content/10.1101/2023.05.16.540925v1",
-        journal: "bioRxiv doi: https://doi.org/10.1101/2023.05.16.540925",
+        link: "https://doi.org/10.1093/genetics/iyae032",
+        journal: "Genetics, iyae032.",
     }, {
+        authors: "Pires-daSilva, A. (2024).",
+        title: <div className="publication-title">Comparative Reproductive Biology in Nematodes.</div>,
+        link: "https://doi.org/10.1016/B978-0-443-21477-6.00039-0",
+        journal: "Reference Module in Biomedical Sciences, (Elsevier), doi: 10.1016/B978-0-443-21477-6.00039-0",
+    }, {
+        authors: "Sirakawin, C., Lin, D., Zhou, Z., Wang, X., Kelleher, R., Huang, S., Long, W., Pires-daSilva, A., Liu, Y., Wang, J., and Vinnikov, I.A. (2023).",
+        title: <div className="publication-title">SKN-1/NRF2 upregulation by vitamin A is conserved from nematodes to mammals and is critical for lifespan extension in <em>Caenorhabditis elegans.</em>.</div>,
+        link: "https://onlinelibrary.wiley.com/doi/10.1111/acel.14064",
+        journal: "Aging Cell, e14064",
+    },{
         authors: "Tandonnet, S., Haq, M., Turner, A., Grana, T., Paganopoulou, P., Adams, S., Dhawan, S., Kanzaki, N., Nuez, I., Felix, M.-A., Pires-daSilva, A. (2022).",
         title: <div className="publication-title"><em>De novo</em> genome assembly of <em>Auanema melissensis</em>,
             a trioecious free-living nematode.</div>,
@@ -110,6 +127,11 @@ const Publications = () => {
         link: "http://www.cell.com/current-biology/fulltext/S0960-9822(17)31519-1",
         journal: "Curr Biol, 28, 93-99"
     }, {
+        authors: "Winter, E. S., Schwarz, A., Fabig, G., Feldman, J. L., Pires-daSilva, A., Müller-Reichert, T., Sadler, P. L., and Shakes, D. C. (2017).",
+        title: <div className="publication-title">Cytoskeletal variations in an asymmetric cell division support diversity in nematode sperm size and sex ratios.</div>,
+        link: "http://dev.biologists.org/content/144/18/3253.long",
+        journal: "Development 144: 3253-3263."
+    },{
         authors: "Kanzaki, N., Kiontke, K., Tanaka, R., Hirooka, Y., Schwarz, A., Müller-Reichert, T., Chaudhuri, J., Pires-daSilva, A. (2017).",
         title: <div className="publication-title">Description of two three-gendered nematode species in the new
             genus <em>Auanema </em>(Rhabditina) that are models for reproductive mode evolution.</div>,
@@ -281,7 +303,7 @@ const Publications = () => {
                        className="button" style={{margin: "10px"}} target="_blank" rel="noreferrer">Google Scholar <div className="arrow-wrapper"><ArrowForwardIcon/></div></a>
                 </div>
                 <div className="publications-container">
-                    <div className="video-publications-container">
+                    {/* <div className="video-publications-container">
                         <div className="header-txt">Videos of recent talks</div>
                         {videos.map((video, index) => {
                             return <a href={video.videoLink} className="video-container" target="_blank"
@@ -290,7 +312,7 @@ const Publications = () => {
                                 {video.title}
                             </a>
                         })}
-                    </div>
+                    </div> */}
                     <div className="header-txt" id="publications">Publications</div>
                     <div className="video-publications-container">
                         {publications.map((publication, index) => {
